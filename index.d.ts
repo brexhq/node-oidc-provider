@@ -339,10 +339,8 @@ export interface IBaseProvider {
   listen(port: string | number): void;
 }
 
-export type IExtendedProvider<T> = IBaseProvider & RepositoryCollection<T>
+export type IProvider<T = {}> = IBaseProvider & RepositoryCollection<T>
 
-export type IProvider = IExtendedProvider<{}>
-
-export class Provider<T = {}> implements IExtendedProvider<T> {
+export class Provider<T = {}> extends IProvider<T> {
   constructor(url: string, config?: IConfiguration)
 }
