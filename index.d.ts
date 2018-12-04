@@ -1,11 +1,11 @@
-// greenboxal: This file exists because I couldn't get an external type definition to work here.
-
 import { Handler } from "express";
 import Koa = require("koa");
 import { IncomingMessage, ServerResponse } from "http";
 import { Http2ServerRequest, Http2ServerResponse } from "http2";
 import EventEmitter = require("events");
 import { isRegExp } from "util";
+
+export { createKeyStore, asKeyStore, asKey } from 'node-jose'
 
 export type SubjectType = "public" | "parwise";
 export type AuthMethod = |"none" | "client_secret_basic" | "client_secret_post" | "client_secret_jwt" | "private_key_jwt" | "tls_client_auth" | "self_signed_tls_client_auth";
@@ -167,6 +167,7 @@ export interface IConfigurationFeatures {
   revocation?: boolean;
   sessionManagement?: boolean;
   webMessageResponseMode?: boolean;
+  disableProductionRestrictions?: boolean;
 }
 
 export interface ICookieOptions {
