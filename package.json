@@ -33,6 +33,7 @@
     "recipes/*.md"
   ],
   "main": "lib/index.js",
+  "types": "index.d.ts",
   "scripts": {
     "coverage": "nyc node ./test/run",
     "heroku-postbuild": "npm install mongodb@^3.0.0 openid-client@^3.0.0",
