@@ -27,11 +27,9 @@
   "license": "MIT",
   "author": "Filip Skokan <panva.ip@gmail.com>",
   "files": [
-    "lib",
-    "index.d.ts"
+    "lib"
   ],
   "main": "lib/index.js",
-  "types": "index.d.ts",
   "scripts": {
     "coverage": "nyc node ./test/run",
     "heroku-postbuild": "npm install mongodb@^3.0.0",
