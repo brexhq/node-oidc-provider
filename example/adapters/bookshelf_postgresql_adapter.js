@@ -163,7 +163,6 @@ class BookshelfPostgresqlAdapter {
       .fetch();
     const data = record.get('data');
     data.consumed = getEpochTime();
-    data.consumedCount = 0;
     await record.save({ data }, { method: 'update', patch: true });
   }
 
