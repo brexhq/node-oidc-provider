@@ -85,7 +85,7 @@ You may check the [example folder](/example) or follow a [step by step example][
 which of those fits your desired application setup.
 
 The examples bundled in this repo's codebase are available for you to experiment with
-[here][heroku-example]. Dynamic Registration is open, you can literally register any client you want
+. Dynamic Registration is open, you can literally register any client you want
 there.   An example client using this provider is available [here][heroku-example-client] (uses
 [openid-client][openid-client]).
 
